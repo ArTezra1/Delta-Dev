@@ -6,6 +6,8 @@
     <title>Delta Dev</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="shortcut icon" href="Imagens/favicon.ico.jpg" type="image/x-icon">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
 </head>
 <body>
     
@@ -19,6 +21,7 @@
             <a href="#sobre">Sobre nós</a>
             <a href="#servicos">Serviços</a>
             <a href="#nossaequipe">Nossa equipe</a>
+            <a href="#Login">Login</a>
             <a href="#contato">Contato</a>
         </nav>
      </header>
@@ -34,12 +37,10 @@
     </div>
  </div>
 
-<hr class="hr">
-
     <main>
         <h2 id="sobre">Sobre nós</h2>
     
-        <p class="sobrep">A Delta é uma empresa especializada em criação de Softwares<br> e em Hospedagem de sites dos nossos clientes, buscamos sempre ser<br> rápidos e eficazes brem nossos atendimentos.</p>
+        <p class="sobrep">A Delta é uma empresa especializada em criação de Softwares<br> e em Hospedagem de sites dos nossos clientes, buscamos sempre ser<br> rápidos e eficazes em nossos atendimentos.</p>
 
      
     
@@ -70,8 +71,6 @@
         </div>
     </div>
 
-    <hr class="hr">
-
         <h2 id="servicos">Serviços</h2>
 
         <div class="containerh2">
@@ -93,8 +92,6 @@
 
         <p class="pservicos">Cada hospedagem é criada rapidamente, com diversas possibilidades de ampliação de recursos de forma rápida e fácil sem necessidade de reinstalação da máquina.</p>
         </div>
-
-        <hr class="hr">
 
         <section id="sessao3">
             <h2 id="nossaequipe">Nossa equipe</h2>
@@ -124,7 +121,36 @@
 
         </section>
 
-        <h2 id="contato">Entre em contato</h2>
+        <h2 id="Login">Login</h2>
+        
+        <div class="logincontainer">
+            <section class="wrapper">
+                <div class="form signup">
+                  <header>Registrar-se</header>
+                  <form action="#">
+                    <input type="text" placeholder="Nome Completo" required />
+                    <input type="text" placeholder="Email" required />
+                    <input type="password" placeholder="Senha" required />
+                    <div class="checkbox">
+                      <input type="checkbox" id="signupCheck" />
+                      <label for="signupCheck">Aceito os termos e condições</label>
+                    </div>
+                    <input type="submit" value="Registrar" />
+                  </form>
+                </div>
+                <div class="form login">
+                  <header>Login</header>
+                  <form action="#">
+                    <input type="text" placeholder="Email" required />
+                    <input type="password" placeholder="Senha" required />
+                    <a href="#">Esqueceu a senha?</a>
+                    <input type="submit" value="Login" />
+                  </form>
+                </div>
+            </section>
+           
+        </div>
+        
  </main>
 
  
@@ -151,7 +177,19 @@
         <p>CopyRight &copy; 2024; Feito por <span class="designer">Arthur, Henrique & Ygor.</span></p>
     </div>
  </footer>
-
- <script src="https://unpkg.com/@phosphor-icons/web"></script>
+ 
+<script>
+    const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+        
+</script>
+ 
 </body>
 </html>
