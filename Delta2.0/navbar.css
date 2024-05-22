@@ -11,11 +11,10 @@
 }
 
 .hero {
-    background: url('Imagens/backgrounddelta.jpg') no-repeat;
+    background: url('Imagens/backgrounddelta.jpg') no-repeat center center;
     min-height: 100vh;
-    max-width: 100%;
-    background-position: center;
-    max-width: 100%;
+    width: 100%;
+    background-size: cover;
 }
 
 body {
@@ -31,6 +30,7 @@ p {
     font-size: 18px;
     text-indent: 15px;
     color: white;
+    transition: left 1s ease-in-out;
 }
 
 .header {
@@ -193,8 +193,7 @@ main {
     border: 50px;
     width: 350px;
     height: 450px;
-    background-image: linear-gradient(to bottom, #0b0c23, #46115d);
-    background-color: white;
+    background-color: #46115d;
     border-radius: 20px;
     display: block;
     text-align: center;
@@ -210,8 +209,7 @@ main {
     border: 50px;
     width: 300px;
     height: 275px;
-    background-image: linear-gradient(to bottom, #0b0c23, #46115d);
-    background-color: white;
+    background-color: #46115d;
     border-radius: 20px;
     display: block;
     text-align: center;
@@ -250,7 +248,7 @@ main {
     }
 
     75% {
-        box-shadow: 0 0 15px rgba(0, 60, 255, 0.5);
+        box-shadow: 0 0 15px rgba(0, 60, 255, 0.502);
     }
 
     100% {
@@ -277,9 +275,23 @@ ul {
 
 /* Lista do quadrado 2 */
 
-.h2sobre {
-    width: 30%;
-    margin-right: 20px;
+/* Titulos do site */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.item {
+    text-align: center;
+}
+
+.h2sobre{
+    margin: 10px 0px 0px 45px;
+    font-size: 1.5em;
+    white-space: nowrap;
     float: left;
     text-align: center;
     padding-left: 125px;
@@ -290,7 +302,16 @@ ul {
     font-size: 25px;
 }
 
-/* Titulos do site */
+.simagens {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.pservicos {
+    margin: 10px 0;
+    padding: 0 20px;
+}
 
 .foto {
     margin: 15px;
@@ -315,15 +336,6 @@ ul {
 
 /* Fotos de baixo */
 
-.containerp {
-    text-align: justify;
-    display: flex;
-    line-height: 30px;
-    justify-content: center;
-}
-
-/* Container dos paragrafos do serviço */
-
 .simagens {
     display: inline-block;
     margin: 0 2%;
@@ -332,18 +344,6 @@ ul {
 }
 
 /* Imagens dos serviços */
-
-.pservicos {
-    display: inline-block;
-    width: 30%;
-    font-size: 16px;
-    text-align: justify;
-    padding: 40px;
-    animation: Aparecer 1s ease-in-out;
-}
-
-/* Paragrafos do serviço */
-
 
 @keyframes Aparecer {
     0% {
@@ -371,7 +371,7 @@ ul {
 /* Parte de Login */
 
 .logincontainer {
-    padding-left: auto;
+    justify-content: center;
     min-height: 100vh;
     min-width: 100vh;
     align-items: center;
@@ -650,29 +650,25 @@ footer {
 
 @media (max-width: 700px) {
 
-    .hero {
-        text-align: center;
-        flex-direction: column;
-        margin: 10px;
-        width: 100%;
+    .hero{
+        background: url('Imagens/backgrounddelta.jpg') no-repeat center center;
+        background-size: cover;
+        min-height: 50vh;
     }
 
-    body {
-        text-align: center;
-        flex-direction: column;
-        margin: 10px;
-        width: 100%;
+    #sobre{
+        padding-top:200px ;
     }
 
-
-    p {
-        font-size: 14px;
-        text-align: center;
-        flex-direction: column;
-        margin: 10px;
-        width: 100%;
+    .espaco{
+        top: 100px;
+        left: 5px;
     }
 
+    .containerquadrado{
+        flex-direction: column;
+    }
+    
     #logo {
         display: none;
     }
@@ -699,13 +695,6 @@ footer {
         flex-direction: column;
         margin: 10px;
 
-        width: 100%;
-    }
-
-    #Tintroducao {
-        text-align: center;
-        flex-direction: column;
-        margin: 10px;
         width: 100%;
     }
 
