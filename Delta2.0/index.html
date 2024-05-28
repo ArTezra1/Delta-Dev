@@ -21,7 +21,6 @@
             <a href="#sobre">Sobre nós</a>
             <a href="#servicos">Serviços</a>
             <a href="#nossaequipe">Nossa equipe</a>
-            <a href="#Login">Login</a>
             <a href="#contato">Contato</a>
         </nav>
      </header>
@@ -42,8 +41,6 @@
     
         <p class="sobrep">A Delta é uma empresa especializada em criação de Softwares<br> e em Hospedagem de sites dos nossos clientes, buscamos sempre ser<br> rápidos e eficazes em nossos atendimentos.</p>
 
-     
-    
     <div class="containerquadrado">
         <div class="quadrado">
             <h3 class="subsobre">Visão</h3>
@@ -118,36 +115,23 @@
 
         </section>
 
-        <h2 id="Login">Login</h2>
-        
-        <div class="logincontainer">
-            <section class="wrapper">
-                <div class="form signup">
-                  <header>Registrar-se</header>
-                  <form action="#">
-                    <input type="text" placeholder="Nome Completo" required />
-                    <input type="text" placeholder="Email" required />
-                    <input type="password" placeholder="Senha" required />
-                    <div class="checkbox">
-                      <input type="checkbox" id="signupCheck" />
-                      <label for="signupCheck">Aceito os termos e condições</label>
-                    </div>
-                    <input type="submit" value="Registrar" />
-                  </form>
-                </div>
-                <div class="form login">
-                  <header>Login</header>
-                  <form action="#">
-                    <input type="text" placeholder="Email" required />
-                    <input type="password" placeholder="Senha" required />
-                    <a href="#">Esqueceu a senha?</a>
-                    <input type="submit" value="Login" />
-                  </form>
-                </div>
-            </section>
-           
-        </div>
-        
+        <h2 id="contato">Contato</h2>
+        <section class="contatocontainer">
+
+            <div class="contato">
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                    <label>Email</label>
+                    <input type="email" name="Email" placeholder="Digite seu Email" required>
+                    <label>Mensagem</label>
+                    <input type="text" name="mensage" placeholder="Digite sua mensagem" required>
+                    <button type="submit">Enviar</button>
+                    <input type="hidden" name="accessKey" value="6c992828-b20a-4b4c-b288-76ab28bc1c3e">
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Delta2.0/obg.html">
+                </form>
+            </div>
+        </section>
  </main>
 
  
@@ -155,10 +139,9 @@
  <footer>
     <div class="footerContainer">
         <div class="socialIcons">
-            <p id="contato"></p>
             <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
             <a href="#"><i class="ph-fill ph-github-logo"></i></a>
-            <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+            <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
         </div>
         <div class="footerNav">
             <ul>
@@ -174,19 +157,6 @@
         <p>CopyRight &copy; 2024; Feito por <span class="designer">Arthur, Henrique & Ygor.</span></p>
     </div>
  </footer>
- 
-<script>
-    const wrapper = document.querySelector(".wrapper"),
-          signupHeader = document.querySelector(".signup header"),
-          loginHeader = document.querySelector(".login header");
-        loginHeader.addEventListener("click", () => {
-          wrapper.classList.add("active");
-        });
-        signupHeader.addEventListener("click", () => {
-          wrapper.classList.remove("active");
-        });
-        
-</script>
  
 </body>
 </html>

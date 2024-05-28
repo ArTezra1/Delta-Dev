@@ -1,2 +1,2 @@
 # Delta-Dev
-Primeiro site feito por leigos para um trabalho de faculdade
+Primeiro site feito por 3 leigos para um trabalho de faculdade
